@@ -22,7 +22,6 @@ public class ConsultaMoneda {
         JsonObject json = gson.fromJson(jsonResponse, JsonObject.class);
         JsonObject rates = json.getAsJsonObject("conversion_rates");
 
-        //double tasaDeConversionInicial = rates.get(monedaInicial).getAsDouble();
         double tasaDeConversionDestino = rates.get(monedaDestino).getAsDouble();
         double cantidadConvertida = cantidad * tasaDeConversionDestino;
 
